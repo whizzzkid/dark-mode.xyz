@@ -8,7 +8,7 @@ Cloudflare CDN then just enable this free app so that your website can render in
 
 **Step 1:** Make sure your traffic is being routed through Cloudflare.
 
-**Step 2:** Enable this app.
+**Step 2:** Enable [this app](https://www.cloudflare.com/apps/JWRjvYySU5Ju).
 
 **Step 3:** Your website should now render in dark mode based on user's device theme.
 
@@ -37,6 +37,8 @@ A few more changes are applied by a JS snippet that finds elements for images lo
 and filters those out. This happens in liner time, based on the number of nodes in your DOM.
 
 ### Benefits
+
+![Converted](images/convert.png)
 
 It's a one-click fix to add dark mode to any website served over Cloudflare and should work on every
 device. This website uses this app!

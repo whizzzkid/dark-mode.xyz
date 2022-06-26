@@ -1,2 +1,5 @@
+title: dark-mode.xyz
+description: 'Add DarkMode to any website that runs on CloudFlare.'
 theme: jekyll-theme-minimal
-logo: icons/dark-mode.png
+logo: images/dark-mode.png
+google_analytics: G-TGXKY7MXJV
