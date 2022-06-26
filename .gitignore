@@ -1,3 +1,4 @@
 .bundlecache
 _site
 .sass*
+.jekyll*

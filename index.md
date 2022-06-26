@@ -1,37 +1,42 @@
-## Welcome to GitHub Pages
+## Enable Dark Mode for Any Website!
 
-You can use the [editor on GitHub](https://github.com/whizzzkid/dark-mode.xyz/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+This is the simplest way to convert your website to have a dark mode. This is a Cloudflare app that
+converts your website into a dark-mode compatible website. If you're serving your website through
+Cloudflare CDN then just enable this free app so that your website can render in dark on every browser.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+###  Installation Steps
 
-### Markdown
+**Step 1:** Make sure your traffic is being routed through Cloudflare.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+**Step 2:** Enable this app.
 
-```markdown
-Syntax highlighted code block
+**Step 3:** Your website should now render in dark mode based on user's device theme.
 
-# Header 1
-## Header 2
-### Header 3
+***Note:** Some HTML components can behave weird but the app tries it's best to convert the page to a
+dark themed one.*
 
-- Bulleted
-- List
+### How does it work
 
-1. Numbered
-2. List
+The app installs a script on the page, that basically inverts the color of every element on the page, making it render in dark-mode and make it easier on the eyes.
 
-**Bold** and _Italic_ and `Code` text
+### Performance
 
-[Link](url) and ![Image](src)
+Most of the changes are applied via CSS, using:
+
+```css
+@media (prefers-color-scheme: dark) {
+
+    :root,
+    img {
+        filter: invert(1) hue-rotate(180deg);
+    }
+}
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+A few more changes are applied by a JS snippet that finds elements for images loaded by other means
+and filters those out. This happens in liner time, based on the number of nodes in your DOM.
 
-### Jekyll Themes
+### Benefits
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/whizzzkid/dark-mode.xyz/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+It's a one-click fix to add dark mode to any website served over Cloudflare and should work on every
+device. This website uses this app!
